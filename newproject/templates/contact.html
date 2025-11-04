@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us | CalorieCalc</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="/static/css/style.css" />
+    <link rel="stylesheet" href="/static/css/contact.css" />
+  </head>
+  <body>
+    <!-- Same Navbar -->
+     <header class="navbar">
+        <div class="container">
+            <div class="navbar-brand">
+                <a href="#" class="logo">CalorieCalc</a>
+                <button class="navbar-toggle" aria-label="Toggle navigation">
+                    <span class="hamburger"></span>
+                </button>
+            </div>
+            <nav class="navbar-menu">
+                <ul class="navbar-links">
+                    <li><a href="{%url 'home'%}" class="nav-link">Home</a></li>
+                    <li><a href="{%url 'aboutus'%}" class="nav-link">About Us</a></li>
+                    <li><a href="{%url 'coloriecount'%}" class="nav-link">Count Calories </a></li>
+                    <li><a href="{%url 'calculators'%}" class="nav-link">Calculators</a></li>
+                    <li><a href="{%url 'contact'%}" class="nav-link">Contact</a></li>
+                    <li><a href="{%url 'logout'%}" class="nav-link">logout</a></li>
+                    <li class="theme-toggle-container">
+                        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
+                            <span class="toggle-icon">
+                                <i class="fas fa-sun"></i>
+                                <i class="fas fa-moon"></i>
+                            </span>
+                            <span class="toggle-ball"></span>
+                        </button>
+                        <li><a href="#" class="nav-link">{{user.username}}</a></li>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- Contact Page Content -->
+    <main class="contact-main">
+      <!-- Hero Section -->
+      <section class="contact-hero">
+        <div class="container">
+          <div class="hero-content">
+            <h1>Get In Touch</h1>
+            <p>
+              We'd love to hear from you! Reach out for support, partnerships,
+              or just to say hello.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Cards -->
+    
+
+      <!-- Contact Form -->
+      <section class="contact-form-section">
+        <div class="container">
+          <div class="form-container">
+            <div class="form-header">
+              <h2>Send Us a Message</h2>
+              <p>
+                Fill out the form below and we'll get back to you within 24
+                hours
+              </p>
+            </div>
+
+            <form id="contactForm" class="modern-form" method="POST" action="{% url 'message' %}">
+              {%csrf_token%}
+              <div class="form-group floating">
+                <input type="text" id="name" required name="name" />
+                <label for="name">Full Name</label>
+                <span class="highlight"></span>
+              </div>
+
+              <div class="form-group floating">
+                <input type="email" id="email" required name="email" />
+                <label for="email">Email Address</label>
+                <span class="highlight"></span>
+              </div>
+
+              <div class="form-group floating">
+                <input type="text" id="subject" required name="subject" />
+                <label for="subject">Subject</label>
+                <span class="highlight"></span>
+              </div>
+
+              <div class="form-group floating">
+                <textarea id="message" rows="4" required name="message"></textarea>
+                <label for="message">Your Message</label>
+                <span class="highlight"></span>
+              </div>
+
+              <div class="form-footer">
+                <button type="submit" class="submit-btn">
+                  <span class="btn-text">Send Message</span>
+                  <span class="btn-icon">
+                    <i class="fas fa-paper-plane"></i>
+                  </span>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ Section -->
+      <section class="faq-section">
+        <div class="container">
+          <h2 class="section-title">Frequently Asked Questions</h2>
+
+          <div class="faq-container">
+            <div class="faq-item">
+              <button class="faq-question">
+                <span>How accurate are your calculators?</span>
+                <i class="fas fa-chevron-down"></i>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  Our calculators use scientifically validated formulas like
+                  Mifflin-St Jeor for BMR and Harris-Benedict for TDEE. While
+                  individual results may vary, they provide excellent estimates
+                  for most people.
+                </p>
+              </div>
+            </div>
+
+            <!-- Add 4-5 more FAQ items -->
+          </div>
+          <div class="faq-container">
+            <div class="faq-item">
+              <button class="faq-question">
+                <span>What is BMR?</span>
+                <i class="fas fa-chevron-down"></i>
+              </button>
+              <div class="faq-answer">
+                <p>
+                   BMR is the number of calories your body burns at rest to maintain basic functions like breathing, heart rate, and cell repair.
+
+                </p>
+              </div>
+            </div>
+
+            <!-- Add 4-5 more FAQ items -->
+          </div>
+          <div class="faq-container">
+            <div class="faq-item">
+              <button class="faq-question">
+                <span>How is BMR calculated?</span>
+                <i class="fas fa-chevron-down"></i>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  It can be estimated using formulas like the Mifflin-St Jeor equation, which uses your age, gender, height, and weight.
+
+                </p>
+              </div>
+            </div>
+
+            <!-- Add 4-5 more FAQ items -->
+          </div>
+          <div class="faq-container">
+            <div class="faq-item">
+              <button class="faq-question">
+                <span>Why is knowing my BMR important?</span>
+                <i class="fas fa-chevron-down"></i>
+              </button>
+              <div class="faq-answer">
+                <p>
+                   It helps you figure out how many calories you need to maintain, lose, or gain weight when combined with your activity level.
+
+                </p>
+              </div>
+            </div>
+
+            <!-- Add 4-5 more FAQ items -->
+          </div>
+          <div class="faq-container">
+            <div class="faq-item">
+              <button class="faq-question">
+                <span>Does BMR change over time?</span>
+                <i class="fas fa-chevron-down"></i>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  Yes, it changes with age, muscle mass, and weight. More muscle = higher BMR.
+
+                </p>
+              </div>
+            </div>
+
+            <!-- Add 4-5 more FAQ items -->
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Same Footer -->
+    <footer class="footer">
+      <!-- Your existing footer content -->
+    </footer>
+
+    <!-- Chat Widget (initially hidden) -->
+    <div class="chat-widget">
+      <div class="chat-header">
+        <h4>Live Support</h4>
+        <button class="close-chat"><i class="fas fa-times"></i></button>
+      </div>
+      <div class="chat-body">
+        <!-- Chat messages will appear here -->
+      </div>
+      <div class="chat-input">
+        <input type="text" placeholder="Type your message..." />
+        <button><i class="fas fa-paper-plane"></i></button>
+      </div>
+    </div>
+
+    <script src="/static/js/logic.js"></script>
+    <script src="/static/js/contact.js"></script>
+  </body>
+</html>

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | CalorieCalc</title>
+    <!-- Your existing Font Awesome link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- New CSS file for about page -->
+    <link rel="stylesheet" href="/static/css/aboutus.css">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <!-- Existing navbar/footer styles -->
+</head>
+<body>
+    <!-- Same Navbar as index.html -->
+    <header class="navbar">
+        <div class="container">
+            <div class="navbar-brand">
+                <a href="#" class="logo">CalorieCalc</a>
+                <button class="navbar-toggle" aria-label="Toggle navigation">
+                    <span class="hamburger"></span>
+                </button>
+            </div>
+            <nav class="navbar-menu">
+                <ul class="navbar-links">
+                    <li><a href="{%url 'home'%}" class="nav-link">Home</a></li>
+                    <li><a href="{%url 'aboutus'%}" class="nav-link">About Us</a></li>
+                    <li><a href="{%url 'coloriecount'%}" class="nav-link">Count Calories </a></li>
+                    <li><a href="{%url 'calculators'%}" class="nav-link">Calculators</a></li>
+                    <li><a href="{%url 'contact'%}" class="nav-link">Contact</a></li>
+                    <li><a href="{%url 'logout'%}" class="nav-link">logout</a></li>
+                    <li class="theme-toggle-container">
+                        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
+                            <span class="toggle-icon">
+                                <i class="fas fa-sun"></i>
+                                <i class="fas fa-moon"></i>
+                            </span>
+                            <span class="toggle-ball"></span>
+                        </button>
+                        <li><a href="#" class="nav-link">{{user.username}}</a></li>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- About Page Content -->
+    <main class="about-main">
+        <!-- Hero Section -->
+        <section class="about-hero">
+            <div class="container">
+                <h1 class="about-title">Our Story</h1>
+                <p class="about-subtitle">Helping people make informed health decisions since 2023</p>
+            </div>
+        </section>
+
+        <!-- Mission Section -->
+        <section class="about-section mission-section">
+            <div class="container">
+                <div class="section-content">
+                    <h2>Our Mission</h2>
+                    <p>At CalorieCalc, we believe accurate nutrition information should be accessible to everyone. We've developed the most precise calculators using scientifically validated formulas to help you understand your body's needs.</p>
+                    <div class="mission-stats">
+                        <div class="stat-item">
+                            <span class="stat-number" data-count="100000">0</span>+
+                            <span class="stat-label">Users</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-count="15">0</span>+
+                            <span class="stat-label">Scientific Formulas</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-count="24">0</span>/7
+                            <span class="stat-label">Availability</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Values Section -->
+        <section class="about-section values-section">
+            <div class="container">
+                <h2 class="section-title">Our Core Values</h2>
+                <div class="values-grid">
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="fas fa-flask"></i>
+                        </div>
+                        <h3>Scientific Accuracy</h3>
+                        <p>We use only peer-reviewed, validated formulas for all our calculations.</p>
+                    </div>
+                    <!-- Add 2-3 more value cards -->
+                </div>
+            </div>
+        </section>
+                <section class="about-section values-section">
+            <div class="container">
+                <h2 class="section-title">Calorie database</h2>
+                <div class="values-grid">
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="fas fa-flask"></i>
+                        </div>
+                        <h3> Calories database </h3>
+                        <p>We have mare than 300 food items with nutrition value protein</p>
+                    </div>
+                    <!-- Add 2-3 more value cards -->
+                </div>
+            </div>
+        </section>
+                <section class="about-section values-section">
+            <div class="container">
+                <h2 class="section-title">Our Calculators</h2>
+                <div class="values-grid">
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="fas fa-flask"></i>
+                        </div>
+                        <h3>Calculators</h3>
+                        <p>User can track and calculate tdee bmi and bmr all in one web page.</p>
+                    </div>
+                    <!-- Add 2-3 more value cards -->
+                </div>
+            </div>
+        </section>
+        
+
+        <!-- CTA Section -->
+        <section class="about-cta">
+            <div class="container">
+                <h2>Ready to Start Your Health Journey?</h2>
+                <a href="calculator.html" class="cta-button">Try Our Calculator</a>
+            </div>
+        </section>
+    </main>
+    <br><br>
+
+    <!-- Same Footer as index.html -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-about">
+                <h3>CalorieCalc</h3>
+                <p>Helping you make informed decisions about your nutrition and fitness since 2023.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#calculator">Calculator</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h3>Contact Us</h3>
+                <ul>
+                    <li><i class="fas fa-envelope"></i> info@caloriecalc.com</li>
+                    <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
+                    <li><i class="fas fa-map-marker-alt"></i> 123 Fitness St, Health City</li>
+                </ul>
+            </div>
+            <div class="footer-newsletter">
+                <h3>Newsletter</h3>
+                <p id="para-subs">Subscribe to get nutrition tips and updates</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Your email address" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p id="footer1">&copy; 2023 CalorieCalc. All rights reserved.</p>
+            <div class="footer-legal">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Cookie Policy</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+    <!-- JavaScript Files -->
+    <script src="/static/js/aboutus.js"></script>
+    <script src="/static/js/logic.js"></script>
+</body>
+</html>

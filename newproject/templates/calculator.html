@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CalorieCalc calculator</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/static/css/calculator.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="container">
+            <div class="navbar-brand">
+                <a href="#" class="logo">CalorieCalc</a>
+                <button class="navbar-toggle" aria-label="Toggle navigation">
+                    <span class="hamburger"></span>
+                </button>
+            </div>
+            <nav class="navbar-menu">
+                <ul class="navbar-links">
+                    <li><a href="{%url 'home'%}" class="nav-link">Home</a></li>
+                    <li><a href="{%url 'aboutus'%}" class="nav-link">About Us</a></li>
+                    <li><a href="{%url 'coloriecount'%}" class="nav-link">Count Calories </a></li>
+                    <li><a href="{%url 'calculators'%}" class="nav-link">Calculators</a></li>
+                    <li><a href="{%url 'contact'%}" class="nav-link">Contact</a></li>
+                    <li><a href="{%url 'logout'%}" class="nav-link">logout</a></li>
+                    <li class="theme-toggle-container">
+                        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
+                            <span class="toggle-icon">
+                                <i class="fas fa-sun"></i>
+                                <i class="fas fa-moon"></i>
+                            </span>
+                            <span class="toggle-ball"></span>
+                        </button>
+                        <li><a href="#" class="nav-link">{{user.username}}</a></li>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+    <section class="calculators-section">
+        <div class="calculators-container">
+            <div class="section-header">
+                <h1 class="section-title">Health Calculators</h1>
+                <p class="section-subtitle">Choose a calculator to get started</p>
+            </div>
+            
+            <div class="calculator-buttons">
+                <a href="{%url 'tdee'%}" class="calculator-btn tdee">
+                    <i class="fas fa-fire-alt"></i>
+                    <span>TDEE Calculator</span>
+                    <p>Calculate your Total Daily Energy Expenditure</p>
+                </a>
+                
+                <a href="{%url 'bmi'%}" class="calculator-btn bmi">
+                    <i class="fas fa-weight"></i>
+                    <span>BMI Calculator</span>
+                    <p>Calculate your Body Mass Index</p>
+                </a>
+                
+                <a href="{%url 'bmr'%}" class="calculator-btn bmr">
+                    <i class="fas fa-heartbeat"></i>
+                    <span>BMR Calculator</span>
+                    <p>Calculate your Basal Metabolic Rate</p>
+                </a>
+                
+                <a href="{%url 'coloriecount'%}" class="calculator-btn calorie">
+                    <i class="fas fa-utensils"></i>
+                    <span>Calorie Calculator</span>
+                    <p>Calculate your daily calorie needs</p>
+                </a>
+            </div>
+        </div>
+    </section>
+    </main>
+
+    <footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-about">
+                <h3>CalorieCalc</h3>
+                <p>Helping you make informed decisions about your nutrition and fitness since 2023.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="calculator.html">Calculator</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="abiutus.html">About Us</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h3>Contact Us</h3>
+                <ul>
+                    <li><i class="fas fa-envelope"></i> info@caloriecalc.com</li>
+                    <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
+                    <li><i class="fas fa-map-marker-alt"></i> 123 Fitness St, Health City</li>
+                </ul>
+            </div>
+            <div class="footer-newsletter">
+                <h3>Newsletter</h3>
+                <p id="para-subs">Subscribe to get nutrition tips and updates</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Your email address" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p id="footer1">&copy; 2023 CalorieCalc. All rights reserved.</p>
+            <div class="footer-legal">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Cookie Policy</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+    <script src="/static/js/logic.js"></script>
+</body>
+</html>

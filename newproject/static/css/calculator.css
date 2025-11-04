@@ -1,0 +1,110 @@
+/* Calculator Section Styles */
+.calculators-section {
+    padding: 5rem 0;
+    background-color: var(--bg-color);
+    min-height: 100vh;
+}
+
+.calculators-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.section-subtitle {
+    font-size: 1.1rem;
+    color: var(--text-color);
+    opacity: 0.8;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.calculator-buttons {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.calculator-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2.5rem 1.5rem;
+    border-radius: 16px;
+    text-decoration: none;
+    color: white;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    min-height: 200px;
+}
+
+.calculator-btn i {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.calculator-btn span {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.calculator-btn p {
+    font-size: 0.9rem;
+    opacity: 0.9;
+    margin: 0;
+}
+
+/* Button Colors */
+.calculator-btn.tdee {
+    background: linear-gradient(135deg, #4361ee 0%, #3a0ca3 100%);
+}
+
+.calculator-btn.bmi {
+    background: linear-gradient(135deg, #4cc9f0 0%, #4895ef 100%);
+}
+
+.calculator-btn.bmr {
+    background: linear-gradient(135deg, #f72585 0%, #b5179e 100%);
+}
+
+.calculator-btn.calorie {
+    background: linear-gradient(135deg, #7209b7 0%, #560bad 100%);
+}
+
+/* Hover Effects */
+.calculator-btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .calculator-buttons {
+        grid-template-columns: 1fr;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .calculator-btn {
+        min-height: 180px;
+        padding: 2rem 1rem;
+    }
+}
